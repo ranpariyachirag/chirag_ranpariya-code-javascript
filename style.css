@@ -1,0 +1,422 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+  }
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #666666;
+    font-size: 17px;
+}
+
+.wrapper
+{
+  max-width: calc(100% - 2rem);
+  margin: 0 auto;
+}
+
+img{
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+.page_heading
+{
+  padding: 0.5rem 0;
+  border-bottom: 2px solid #999999;
+
+}
+
+main p{
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+p.page_heading_text
+{
+  margin: 20px 0;
+}
+
+
+header img{
+  clear: both;
+  width: 100%;
+  margin: 20px auto;
+
+}
+
+.hamburger-menu
+{
+  display: block;
+  color: #fff;
+  background-color: #222222;
+  padding: 15px 20px;
+  text-align:center;
+  text-shadow:1px 1px 0px #999;
+}
+
+nav ul#navigation
+{
+  list-style-type: none;
+  position:absolute;
+  width:calc(100% - 2rem);
+
+}
+
+
+nav ul li a {
+
+  color: #ffffff;
+  padding: 15px 20px;
+  text-decoration:none;
+  display:block;
+  font-weight: bold;
+  text-align: left;
+  background-color: #777777;
+}
+
+
+nav ul li ul li a{
+  background-color: #444444;
+  padding-left: 70px;
+}
+
+
+ul.dropdown{
+  position: static;
+  float: none;
+  opacity: 1;
+  visibility: visible;
+  list-style-type: none;
+}
+
+ul#navigation li a.lable-btn-1
+{
+padding :0;
+}
+
+ul#navigation li a.lable-btn-1 label
+{
+padding : 15px 20px;
+display:block;
+width:100%;
+}
+nav input#btn, input#btn-1
+{
+  display: none;
+}
+
+
+
+ul#navigation{
+  display: none;
+}
+ ul.dropdown{
+  display: none;
+}
+
+[id^=btn]:checked + ul#navigation{
+  display: block;
+}
+
+[id^=btn-1]:checked + ul.dropdown{
+  display: block;
+}
+
+
+/* accordian */
+
+section.accordian{
+	display: block;
+	margin:30px auto;
+}
+
+.accordian .province{
+	margin-bottom:20px;
+	width: 100%;
+  border: 2px solid #999999;
+  border-radius: 10px;
+
+}
+.accordian .province .province-header h3{
+	cursor: pointer;
+	color:#777777;
+	position: relative;
+  font-weight: bold;
+	margin:0;
+  padding:20px;
+
+
+}
+.accordian .province .province-header {
+	position: relative;
+  cursor: pointer;
+}
+.accordian .province .province-header span{
+	position: absolute;
+	right:20px;
+	top:17px;
+	height:30px;
+	width:30px;
+	text-align: center;
+	line-height:30px;
+
+}
+
+/*open one province by default*/
+.accordian .province:nth-child(4) .province-body{
+  display: block;
+
+ }
+.accordian .province .province-body{
+	padding:20px;
+  display: none;
+  position: relative;
+
+}
+
+.accordian .province .province-body .update-date{
+  position: absolute;
+  top:0;
+  right: 50px;
+
+}
+
+.accordian .province .province-body p{
+	font-size: 1.2rem;
+  line-height: 30px;
+  text-shadow: 0px 0px 0.2px #777777;
+}
+
+.accordian .province .province-body p a{
+	text-decoration: none;
+  word-wrap: break-word;
+  color: blue;
+}
+.accordian .province .province-body p a:hover{
+	text-decoration: none;
+  word-wrap: break-word;
+  text-decoration: underline;
+}
+
+
+/* accordian end */
+
+/* table updates */
+
+
+table#updates-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 22px;
+  text-shadow: 0px 0px 0.2px #777777;
+  margin-top: 20px;
+
+}
+
+table#updates-table td p {
+  font-size: 1rem;
+  line-height: 22px;
+
+}
+
+#updates-table td .table-content-heading
+{
+  text-shadow: none;
+}
+#updates-table th {
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-shadow: none;
+
+}
+
+#updates-table td, #updates-table th {
+  border: 1px solid #999999;
+  padding: 10px;
+}
+
+#updates-table td:first-child, #updates-table th:first-child {
+  width: 100px;
+  text-align: center;
+  vertical-align: top;
+}
+#updates-table tr:nth-child(odd){
+  background-color: #f2f2f2;
+}
+
+
+
+#updates-table th {
+  padding:15px;
+  text-align: left;
+  background-color: #666666;
+  color: white;
+}
+
+.accordian .province .province-body p a.text_red
+{
+  color: #b91e23;
+  cursor: pointer;
+}
+
+span.redTxt{
+  color: #b91e23;
+
+}
+
+
+@media only screen and (min-width:600px) and (max-width:1079px)
+{
+  #updates-table td:first-child, #updates-table th:first-child {
+    width: 150px;
+
+  }
+
+}
+
+
+@media only screen and (min-width:1080px)
+{
+    .wrapper
+    {
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+
+    header{
+
+        margin-top: 50px;
+    }
+
+    nav{
+
+        position: relative;
+        margin-top: 50px;
+    }
+
+    nav ul#navigation {
+      list-style-type: none;
+      margin: 0 auto;
+      padding: 0;
+      position: relative;
+      display: block;
+      width:100%;
+    }
+
+    nav ul#navigation li{
+    list-style-type: none;
+    display: inline;
+    float: left;
+    width: 360px;
+    border-right: 0.2px solid #ddd;
+    }
+
+    nav ul li a {
+      color: #ffffff;
+      padding: 15px 20px;
+      text-decoration:none;
+      display:block;
+      font-weight: bold;
+      text-align: center;
+      background-color: #777777;
+    }
+
+    ul#navigation li a:hover {
+    background-color:#444444;
+    text-shadow:1px 1px 0px #444444;
+    }
+
+    ul#navigation li a.active {
+      background-color: #444444;
+      color: #ffffff;
+    }
+
+
+    /* Drop-Down Navigation */
+    nav ul#navigation ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: none;
+      visibility:hidden;
+      position: absolute;
+      z-index: 99999;
+      opacity:0;
+      width: 360px;
+      border-top: 0.2px solid #ddd;
+
+    }
+
+    ul#navigation li:hover > ul
+    {
+      visibility:visible;
+      opacity:1;
+      display: block;
+
+    }
+
+    ul#navigation ul li {
+      clear:both;
+      width:100%;
+      display: block;
+
+    }
+
+    nav ul li ul li a{
+      background-color: #666666;
+      padding-left: 0;
+    }
+
+    nav ul#navigation li ul li:hover > a {
+      background-color: #444444;
+    }
+
+    nav input,.menu-icon,.hamburger-menu,.show-menu
+    {
+      display: none;
+    }
+
+
+
+    main p{
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+
+
+    /* table updates */
+
+    table#updates-table {
+      font-size: 1.1rem;
+      line-height: 25px;
+    }
+
+    table#updates-table td p {
+      font-size: 1.1rem;
+      line-height: 25px;
+
+    }
+
+
+    #updates-table th {
+      font-size: 1.2rem;
+    }
+
+
+    #updates-table td:first-child, #updates-table th:first-child {
+      width: 200px;
+    }
+
+    #updates-table th {
+      padding:15px 20px;
+    }
+
+}
